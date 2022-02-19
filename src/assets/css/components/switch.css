@@ -1,0 +1,15 @@
+/* ===== SIDEBAR STYLING ===== */
+
+.switch {
+    display: flex;
+    align-items: center;
+    margin-top: 65px;
+}
+
+.switch .switch-next {
+    margin-left: auto;
+}
+
+.switch a {
+    text-decoration: none;
+}

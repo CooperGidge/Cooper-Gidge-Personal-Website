@@ -1,0 +1,50 @@
+/* ===== CONTACT FORM ===== */
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    font-family: var(--text);
+    padding: 12px 7px;
+    font-size: 1.25em;
+    border-radius: 5px;
+    outline: none;
+    border: 1px var(--contact-border) solid;
+    background: var(--base-dim-white);
+    color: var(--base-light-black);
+    box-sizing: border-box;
+}
+
+
+.contact-form input:focus, .contact-form textarea:focus {
+    /*transition: all 0.3s ease;
+    box-shadow: 0 0 0 5px var(--desat-primary);*/
+    border: 1px var(--base-light-black) solid;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    height: 130px;
+}
+
+.contact-form .contact-form-top {
+    display: flex;
+    gap: 25px;
+}
+
+.contact-form .contact-form-top div {
+    width: 100%;
+}
+
+.contact-form .contact-form-warning {
+    color: var(--link-primary);
+    font-size: 1.2em;
+}
+
+/* ===== MOBILE OPTIMIZATION ===== */
+
+@media only screen and (max-width: 450px) {
+
+    .contact-form .contact-form-top {
+        display: block;
+    }
+
+}

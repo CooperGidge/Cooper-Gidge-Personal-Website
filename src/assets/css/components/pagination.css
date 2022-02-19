@@ -1,0 +1,59 @@
+/* ===== PAGINATION ===== */
+
+.pagination-wrapper {
+    display: block;
+}
+
+.pagination {
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pagination a.pagination-button {
+    color: var(--light-black);
+    text-decoration: none;
+    font-size: 2em;
+    background-color: var(--dim-primary);
+    text-align: center;
+    height: 30px;
+    width: 30px;
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid rgba(255, 255, 255, 0);
+    margin-bottom: 20px;
+    transition: background-color 0.25s ease;
+}
+
+.pagination a.pagination-end {
+    opacity: 50%;
+    cursor: default;
+}
+
+.pagination a.pagination-button:hover {
+    background-color: var(--sat-primary) !important;
+}
+
+.pagination a.pagination-end:hover {
+    background-color: var(--dim-primary) !important;
+}
+
+.pagination a[aria-current] {
+    border-bottom: 3px solid var(--light-black) !important;
+}
+
+/* ===== MOBILE OPTIMIZATION ===== */
+
+@media only screen and (max-width: 765px) {
+
+    .pagination a.pagination-button {
+        height: 15px;
+        width: 15px;
+        font-size: 1.5em;
+    }
+
+}

@@ -1,0 +1,20 @@
+---
+layout: layouts/base.njk
+pagination:
+    data: collections.pagedPosts
+    size: 1
+    alias: paged
+permalink: "/posts/{% if paged.number > 1 %}{{ paged.number }}/{% endif %}index.html"
+title: Archive
+heading: Post Archive
+subheading: Looking for a read? Here is a list of all my posts, in reverse-chronological order.
+archivepage: true
+---
+
+<div class="flex flex-wrap -mx-2">
+    {% include "partials/pagedPostList.njk" %}
+</div>
+
+{% if collections.posts.length > site.paginate %}
+{% include "partials/paginator.njk" %}
+{% endif %}

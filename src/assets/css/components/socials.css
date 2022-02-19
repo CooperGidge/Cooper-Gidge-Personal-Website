@@ -1,0 +1,49 @@
+/* ===== SOCIALS COMPONENT ===== */
+
+.socials {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.socials a {
+    text-decoration: none !important;
+    color: inherit !important;
+    font-size: 1.65em;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.socials span {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.5em;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.socials .head-socials-line {
+    width: 50px;
+    background-color: var(--dim-white);
+    height: 2px;
+    display: inline-block;
+}
+
+.socials-light .socials .head-socials-line {
+    background-color: var(--base-light-black);
+}
+
+/* ===== MOBILE OPTIMIZATION ===== */
+
+@media only screen and (max-width: 350px) {
+
+    .socials .head-socials-line {
+        width: 100%;
+    }
+
+    
+    .socials span {
+        display: none;
+    }
+
+}

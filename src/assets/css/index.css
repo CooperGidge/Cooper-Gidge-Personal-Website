@@ -1,0 +1,47 @@
+/* ===== FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* ===== DEFAULT STYLES ===== */
+/* Colors and fonts */
+@import url("variables.css");
+/* Base styles */
+@import url("default.css");
+
+/* ===== COMPONENTS ===== */
+/* Navbar and hero section */
+@import url("components/head.css");
+/* Mobile Menu */
+@import url("components/mobilemenu.css");
+/* Button */
+@import url("components/button.css");
+/* Social links component */
+@import url("components/socials.css");
+/* Main layout and sidebar */
+@import url("components/main.css");
+/* Sidebar */
+@import url("components/sidebar.css");
+/* Postlist */
+@import url("components/postlist.css");
+/* Post */
+@import url("components/post.css");
+/* Pagination */
+@import url("components/pagination.css");
+/* Contact Form */
+@import url("components/contactform.css");
+/* Background */
+@import url("components/bg.css");
+/* Code Demo */
+@import url("components/codedemo.css");
+/* Notif */
+@import url("components/notif.css");
+/* Mobile Bar */
+@import url("components/mobilebar.css");
+/* Tooltip */
+@import url("components/tooltip.css");
+/* Skip to content */
+@import url("components/skip.css");
+/* Switch */
+@import url("components/switch.css");
+/* Footer */
+@import url("components/foot.css");

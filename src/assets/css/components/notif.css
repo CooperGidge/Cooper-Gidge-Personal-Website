@@ -1,0 +1,90 @@
+/* ===== NOTIF ===== */
+
+.notif-closed .notif {
+    display: none;
+}
+
+.notif {
+    background: var(--notif-bg);
+    padding: 30px;
+    margin: 30px;
+    color: var(--white);
+    font-size: 1.2em;
+    line-height: 1.5;
+    position: fixed;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    z-index: 200;
+    max-width: 500px;
+    border-radius: 5px;
+    bottom: 0;
+    opacity: 100%;
+    transition: opacity 0.25s ease;
+}
+
+.notif p {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.notif-options-container {
+    display: flex;
+}
+
+.notif-options {
+    margin-left: auto;
+}
+
+.notif-option, a.notif-option {
+    font-size: 1em;
+    line-height: 1.5;
+    color: var(--primary);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.25s ease;
+}
+
+.notif-option:hover, a.notif-option:hover {
+    background-color: var(--primary-transparent);
+}
+
+span.notif-option {
+    margin-left: 30px;
+}
+
+/* ===== MOBILE OPTIMIZATION ===== */
+
+@media only screen and (max-width: 765px) {
+
+    .notif {
+        font-size: 1.15em;
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .notif p {
+        margin-bottom: 15px;
+    }
+
+    .notif-option, a.notif-option {
+        padding: 5px;
+    }
+
+    span.notif-option {
+        margin-left: 25px;
+    }
+
+}
+
+@media only screen and (max-width: 350px) {
+
+    .notif {
+        margin: 0px;
+        border-radius: 0px;
+    }
+
+}

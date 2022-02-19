@@ -1,0 +1,46 @@
+<img src="/assets/images/clock.jpeg" alt="Clock">
+<span class="sidebar-caption">This clock is here to remind you that you only live once.</span>
+
+{% if author %}
+{% set myAuthor = authors | getAuthor(author) %}
+<h1>I am {{ myAuthor.firstname }}</h1>
+
+<p>
+    {{ myAuthor.bio }}
+</p>
+{% else %}
+<h1>I am Cooper</h1>
+
+<p>
+    {{ site.bio }}
+</p>
+{% endif %}
+
+{% for post in collections.posts | head(1) %}
+<a class="button{% if post.url == page.url %} button-dim{% endif %}" {% if post.url == page.url %}tabindex="-1"{% endif %} href="{{ post.url | url }}">Latest Post</a>
+{% endfor %}
+
+<a class="button{% if archivepage %} button-dim{% endif %}" {% if archivepage %}tabindex="-1"{% endif %} href="/posts/">Archive</a>
+
+<a class="button{% if aboutpage %} button-dim{% endif %}" {% if aboutpage %}tabindex="-1"{% endif %} href="/about/">About</a>
+
+<a class="button{% if contactpage %} button-dim{% endif %}" {% if contactpage %}tabindex="-1"{% endif %} href="/contact/">Contact</a>
+
+{% if blogpost %}
+<div class="citation">
+    <details>
+        <summary>Citation Info</summary>
+        <span class="citation-content">
+            Please note that I would not consider anything on this website a reliable source.
+            <br>
+            <br>
+            <b>MLA 8th Edition:</b><br>
+            {{ myAuthor.lastname }}, {{ myAuthor.firstname }}. “{{ title }}.” <i>Cooper Gidge</i>, {{ page.date | readableDateDay }} {{ page.date | readableDateMonthShort }}. {{ page.date | readableDateYear }}, {{ site.url }}{{ page.url }}.
+            <br>
+            <br>
+            <b>APA 7th Edition:</b><br>
+            {{ myAuthor.lastname }}, <span style="text-transform: uppercase;">{{ myAuthor.firstinitial }}</span>. ({{ page.date | readableDateYear }}, {{ page.date | readableDateMonth }} {{ page.date | readableDateDay }}). <i>{{ title }}</i>. Cooper Gidge. {{ site.url }}{{ page.url }}
+        </span>
+    </details>
+</div>
+{% endif %}

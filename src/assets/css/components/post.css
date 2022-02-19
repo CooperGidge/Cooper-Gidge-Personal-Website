@@ -1,0 +1,293 @@
+/* ===== SIDEBAR STYLING ===== */
+
+.post h1 {
+    color: var(--heading-color);
+    font-size: 3.5em;
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+    margin-bottom: 30px;
+}
+
+.post h2 {
+    color: var(--base-light-black);
+    font-size: 2.2em;
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+.post ol, .post ul {
+    font-size: var(--text-size);
+    margin-bottom: 20px;
+}
+
+.post ol ol, .post ol ul, .post ul ol, .post ul ul {
+    font-size: var(--text-size);
+    margin-bottom: 0;
+}
+
+.post p, .post li, .post label {
+    color: var(--base-light-black);
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+    line-height: 1.95;
+    margin-bottom: 20px;
+    hyphens: auto;
+}
+
+.post li {
+    margin-bottom: 1px;
+}
+
+.post pre code {
+    font-size: 1.5em;
+    font-weight: initial;
+    color: unset;
+}
+
+.post code {
+    color: var(--link-primary);
+    background-color: var(--icodebg);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.post pre {
+    margin: 20px 0 !important;
+}
+
+/*.post a {
+    color: var(--link-primary);
+    text-decoration: none;
+    background-image: linear-gradient(to right, var(--link-primary) 100%, transparent 75%);
+    background-position: 0 1.06em;
+    background-repeat: repeat-x;
+    background-size: 1px 1px;
+    text-shadow:
+    -1px -1px var(--base-dim-white),
+    -1px 1px var(--base-dim-white),
+    1px -1px var(--base-dim-white),
+    1px 1px var(--base-dim-white);
+}
+
+.post h1 a {
+    color: var(--link-primary);
+    text-decoration: none;
+    background-image: linear-gradient(to right, var(--link-primary) 100%, transparent 75%);
+    background-position: 0 1.2em;
+    background-repeat: repeat-x;
+    background-size: 2px 2px;
+    text-shadow:
+    -1px -1px var(--base-dim-white),
+    -1px 1px var(--base-dim-white),
+    1px -1px var(--base-dim-white),
+    1px 1px var(--base-dim-white);
+}
+
+.post h2 a {
+    color: var(--link-primary);
+    text-decoration: none;
+    background-image: linear-gradient(to right, var(--link-primary) 100%, transparent 75%);
+    background-position: 0 1.2em;
+    background-repeat: repeat-x;
+    background-size: 1.25px 1.25px;
+    text-shadow:
+    -1px -1px var(--base-dim-white),
+    -1px 1px var(--base-dim-white),
+    1px -1px var(--base-dim-white),
+    1px 1px var(--base-dim-white);
+}*/
+
+.post a {
+    color: var(--link-primary);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+}
+
+/* https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/ */
+
+.post blockquote {
+    margin: 0;
+    margin-bottom: 20px;
+    margin-top: 25px;
+    position: relative;
+    margin-left: 60px;
+}
+
+.post blockquote:before {
+    color: var(--base-white-light-grey);
+    content: "“";
+    font-size: 7em;
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+    position: absolute;
+    margin-left: -60px;
+    margin-top: -10px;
+}
+
+.post blockquote p {
+    display: inline;
+    font-style: italic;
+    font-size: 1.6em;
+}
+
+.post hr {
+    border: 0px solid transparent;
+    background-color: var(--dim-primary);
+    height: 7px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 40px 0 45px 0;
+}
+
+.post ul {
+    list-style-type: square;
+}
+
+.post ul li::marker {
+    color: var(--base-black);
+}
+
+.post ol li::marker {
+    color: var(--base-black);
+    font-weight: bold;
+}
+
+/*.alert {
+    background-color: var(--base-dark-white);
+    padding: 20px 30px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 30px 0;
+}
+
+.alert p::before {
+    content: "👉 To Note: ";
+    display: inline;
+    font-weight: bold;
+    color: var(--base-black);
+}*/
+
+.alert, .citation details {
+    background-color: var(--light-primary);
+    padding: 20px 30px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 30px 0;
+    border: var(--primary) 5px solid;
+    /*border-left: var(--primary) 7px solid;*/
+    /*box-shadow: 0 1px 10px rgba(0,0,0,0.13);*/
+    display: flex;
+    align-items: center;
+    font-size: 0.85em;
+}
+
+.alert p::before {
+    content: "To Note: ";
+    display: inline;
+    font-weight: bold;
+    color: var(--black);
+}
+
+.alert p {
+    margin: 0;
+    color: var(--light-black);
+}
+
+/*.post .alert a {
+    text-decoration: none;
+    background-image: linear-gradient(to right, var(--alert-link-primary) 100%, transparent 75%);
+    background-position: 0 1.06em;
+    background-repeat: repeat-x;
+    background-size: 1px 1px;
+    text-shadow:
+    -1px -1px var(--light-primary),
+    -1px 1px var(--light-primary),
+    1px -1px var(--light-primary),
+    1px 1px var(--light-primary);
+    color: var(--alert-link-primary);
+}*/
+
+.citation details {
+    color: var(--light-black);
+    font-size: unset;
+    margin: 0;
+    padding: 10px 20px;
+    line-height: 1.95;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.citation details summary {
+    font-size: 1.25em;
+    cursor: pointer;
+}
+
+.citation details summary::-webkit-details-marker {
+    display: none;
+}
+
+.citation details span.citation-content {
+    font-size: 1em;
+}
+
+.post img {
+    max-width: 100%;
+}
+
+/* ===== MOBILE OPTIMIZATION ===== */
+
+/*@media only screen and (max-width: 1500px) {
+
+    .post a {
+        background-position: 0 1.08em;
+        text-shadow:
+        -1px -1px var(--base-dim-white),
+        -1px 1px var(--base-dim-white),
+        1px -1px var(--base-dim-white),
+        1px 1px var(--base-dim-white);
+    }
+
+}*/
+
+@media only screen and (max-width: 765px) {
+
+    .post h1 {
+        font-size: 2.85em;
+    }
+    
+    .post h2 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    .post pre code {
+        font-size: 1.35em;
+    }
+
+    /*.post a {
+        background-position: 0 1.11em;
+        text-shadow:
+        -1px -1px var(--base-dim-white),
+        -1px 1px var(--base-dim-white),
+        1px -1px var(--base-dim-white),
+        1px 1px var(--base-dim-white);
+    }*/
+
+    .alert {
+        font-size: 0.85em;
+    }
+
+    .citation details summary {
+        font-size: 1.5em;
+    }
+
+    .citation details span.citation-content {
+        font-size: 1.25em;
+    }
+
+}

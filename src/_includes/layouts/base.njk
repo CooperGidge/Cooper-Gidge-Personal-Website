@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Welcome to the source code! -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{%- if title -%}{{ title }} | Cooper Gidge{%- else -%}Cooper Gidge{%- endif -%}</title>
+
+    <meta name="title" content="{%- if title -%}{{ title }} | Cooper Gidge{%- else -%}Cooper Gidge{%- endif -%}">
+    <meta name="description" content="{{ desc or metadata.desc}}">
+    {% if author %}
+    {% set myAuthor = authors | getAuthor(author) %}
+    <meta name="author" content="{{ myAuthor.name }}">
+    {% endif %}
+    {% if date %}
+    <meta name="date" content="{{ page.date | readableDateMonthShort }}. {{ page.date | readableDateDay }}, {{ page.date | readableDateYear }}">
+    {% endif %}
+    <meta name="theme-color" content="#E4CD00">
+    <link rel="icon" href="/assets/images/clock.jpeg">
+
+    <link rel="stylesheet" href="/assets/css/index.css">
+
+    <link rel="stylesheet" href="/assets/css/tooltip.min.css">
+    
+    <!-- Remix Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+
+    <!-- Syntax Highlight Theme -->
+    <!--<link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">-->
+    <link href="/assets/css/prism-theme.css" rel="stylesheet">
+
+    <!-- Toastify JS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- Opengraph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}">
+    <meta property="og:title" content="{%- if title -%}{{ title }} | Cooper Gidge{%- else -%}Cooper Gidge{%- endif -%}">
+    <meta property="og:description" content="{{ desc or metadata.desc}}">
+    <meta property="og:image" content="/assets/images/bg.jpg">
+
+    <!-- Twitter since they're different or something -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ site.url }}">
+    <meta property="twitter:title" content="{%- if title -%}{{ title }} | Cooper Gidge{%- else -%}Cooper Gidge{%- endif -%}">
+    <meta property="twitter:description" content="{{ desc or metadata.desc}}">
+    <meta property="twitter:image" content="/assets/images/bg.jpg">
+</head>
+<body class="preload notif-closed" onload="loaded()" id="page">
+
+    {% include "partials/components/skip.njk" %}
+    
+    {% include "partials/components/notif.njk" %}
+    
+    {% include "partials/components/mobileMenu.njk" %}
+
+    {% include "partials/components/mobileBar.njk" %}
+
+    {% include "partials/components/head.njk" %}
+
+    <script>
+        const btn3 = document.querySelector(".btn-toggle");
+
+        const currentTheme = localStorage.getItem("theme");
+        if (currentTheme == "dark") {
+            document.body.classList.add("darkmode");
+            btn3.classList.add("ri-sun-line");
+            btn3.classList.remove("ri-moon-line");
+            btn3.setAttribute("data-tooltip", "Light Mode");
+        } else {
+            btn3.classList.remove("ri-sun-line");
+            btn3.classList.add("ri-moon-line");
+            btn3.setAttribute("data-tooltip", "Dark Mode");
+        }
+
+        btn3.addEventListener("click", function () {
+            themeToggle();
+        });
+
+        btn3.addEventListener("keydown", function () {
+            if (event.keyCode === 13) {
+                themeToggle();
+            }
+        });
+
+        function themeToggle() {
+            document.body.classList.toggle("darkmode");
+
+            let theme = "light";
+            if (document.body.classList.contains("darkmode")) {
+                theme = "dark";
+            }
+            localStorage.setItem("theme", theme);
+        }
+    </script>
+
+    <div id="main">
+        {% include "partials/components/main.njk" %}
+    </div>
+
+    {% include "partials/components/foot.njk" %}
+
+    <script>
+        function dmTest() {
+            if (!document.body.classList.contains("darkmode")) {
+                //toast("Dark mode is still very experimental.");
+                toast("Dark mode enabled.");
+                btn3.classList.add("ri-sun-line");
+                btn3.classList.remove("ri-moon-line");
+                btn3.setAttribute("data-tooltip", "Light Mode");
+            } else {
+                //toast("Light mode enabled.");
+                toast("Light mode enabled.");
+                btn3.classList.remove("ri-sun-line");
+                btn3.classList.add("ri-moon-line");
+                btn3.setAttribute("data-tooltip", "Dark Mode");
+            }
+        }
+    </script>
+
+    <script>
+        function loaded() {
+            document.getElementById("page").classList.remove("preload");
+            {% if contactpage %}contactPage();{% endif %}
+        }
+    </script>
+
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+    <script type="text/javascript" src="/assets/js/tooltip.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <script>
+        function toast(text) {
+            Toastify({
+            text: text,
+            duration: 3000,
+            newWindow: true,
+            gravity: "top", // `top` or `bottom`
+            position: "left", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+                background: "var(--notif-bg)",
+                color: "var(--white)",
+                fontFamily: "var(--text)",
+                borderRadius: "5px",
+                boxShadow: "0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)",
+                textAlign: "center",
+            },
+            onClick: function(){} // Callback after click
+            }).showToast();
+        }
+    </script>
+
+    <script>
+        var matched = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        var notif = document.getElementById("notif");
+
+        const btn = document.querySelector(".notif-btn");
+        const currentSetting = localStorage.getItem("setting");
+
+        if (currentSetting == "closed") {
+            document.body.classList.add("notif-closed");
+        } else if (matched) {
+            document.body.classList.remove("notif-closed");
+        } else {
+            document.body.classList.add("notif-closed");
+        }
+
+        btn.addEventListener("click", function() {
+            notifState();
+        });
+
+        btn.addEventListener("keydown", function () {
+            if (event.keyCode === 13) {
+                notifState();
+            }
+        });
+
+        function notifState() {
+
+            notif.style.opacity = "0";
+            setTimeout(function(){
+                document.body.classList.toggle("notif-closed");
+
+
+                let setting = "open";
+
+                if (document.body.classList.contains("notif-closed")) {
+
+                    setting = "closed";
+                }
+
+                localStorage.setItem("setting", setting);
+            }, 500);
+        }
+
+    </script>
+
+    {% if contactpage %}
+    <script>
+
+        function contactPage(){
+
+            var contactName = Math.floor((Math.random() * 2) + 1);
+            if (contactName == 1) {
+                document.getElementById("cname").setAttribute("placeholder", "John Doe");
+                document.getElementById("cemail").setAttribute("placeholder", "johndoe@example.com");
+            } else {
+                document.getElementById("cname").setAttribute("placeholder", "Jane Doe");
+                document.getElementById("cemail").setAttribute("placeholder", "janedoe@example.com");
+            }
+
+            // NOT DONE YET, ADD OPTIONS
+            var contactMsg = Math.floor((Math.random() * 3) + 1);
+            if (contactMsg == 1) {
+                document.getElementById("cmsg").setAttribute("placeholder", "Hello! Me and my team are looking (...)");
+            } else if (contactMsg == 2) {
+                document.getElementById("cmsg").setAttribute("placeholder", "Hello! Your work has been really (...)");
+            } else {
+                document.getElementById("cmsg").setAttribute("placeholder", "Hello! I liked what you wrote about (...)");
+            }
+
+        };
+    </script>
+    {% endif %}
+    
+</body>
+</html>

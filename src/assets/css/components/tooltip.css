@@ -1,0 +1,12 @@
+.tooltip {
+    background-color: var(--notif-bg) !important;
+    border-color: var(--notif-bg) !important;
+    color: var(--white) !important;
+    font-family: var(--text) !important;
+    font-size: 1.1em !important;
+    z-index: 999 !important;
+}
+
+.tooltip .tooltip-comp-arrow::before {
+    background-color: var(--notif-bg) !important;
+}

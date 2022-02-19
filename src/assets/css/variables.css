@@ -1,0 +1,93 @@
+body {
+    /* ===== UNCHANGING NEUTRAL COLORS ===== */
+    --white: rgb(255, 255, 255);
+    --black: rgb(0, 0, 0);
+    --dim-white: rgb(240, 240, 240);
+    --light-black: rgb(20, 20, 20);
+    /* Oddly specific colors */
+    --head-p: rgba(245, 245, 245, 0.8);
+    --notif-bg: rgb(36, 36, 32);
+    --icodebg: rgb(236, 234, 213);
+    --contact-border: rgba(0, 0, 0, 0.6);
+    --heading-color: rgb(20, 20, 20);
+    --alert-link-primary: rgb(150, 76, 0);
+    --code-bg: rgb(27, 27, 24);
+
+    --disabled-op: 50%;
+
+    /* ===== VARIABLE COLORS ===== */
+    /* Neutral colors */
+    --base-white: rgb(255, 255, 255);
+    --base-black: rgb(0, 0, 0);
+    --base-dim-white: rgb(240, 240, 240);
+    --base-dark-white: rgb(219, 219, 219);
+    --base-light-black: rgb(20, 20, 20);
+    --base-white-grey: rgba(0, 0, 0, 0.6);
+    --base-white-light-grey: rgba(0, 0, 0, 0.25);
+    /* Brand colors */
+    --primary: rgb(228, 205, 0);
+    --light-primary: rgb(255, 249, 197);
+    --dim-primary: rgb(228, 205, 0);
+    --sat-primary: rgb(245, 220, 0);
+    --desat-primary: rgba(228, 205, 0, 0.5);
+    --link-primary: rgb(150, 76, 0);
+    --primary-transparent: rgba(150, 75, 0, 0.15);
+
+    /* ===== FONTS ===== */
+    --text: 'Libre Baskerville', serif;
+    --heading: 'Playfair Display', serif;
+    --code: 'Cousine', monospace;
+    --text-size: 14px;
+}
+
+body.darkmode {
+    /* ===== UNCHANGING NEUTRAL COLORS ===== */
+    --white: rgb(255, 255, 255);
+    --black: rgb(0, 0, 0);
+    --dim-white: rgb(240, 240, 240);
+    --light-black: rgb(20, 20, 20);
+    /* Oddly specific colors */
+    --head-p: rgba(245, 245, 245, 0.8);
+    --notif-bg: rgb(36, 36, 32);
+    --icodebg: rgb(34, 34, 31);
+    --contact-border: rgba(255, 255, 255, 0.1);
+    --heading-color: rgb(241, 241, 241);
+    --alert-link-primary: rgb(150, 76, 0);
+    --code-bg: rgb(10, 10, 9);
+
+    --disabled-op: 25%;
+
+    /* ===== VARIABLE COLORS ===== */
+    /* Neutral colors */
+    --base-white: rgb(0, 0, 0);
+    --base-black: rgb(255, 255, 255);
+    --base-dim-white: rgb(22, 22, 21);
+    --base-dark-white: rgb(15, 15, 15);
+    --base-light-black: rgb(207, 207, 207);
+    --base-white-grey: rgba(245, 245, 245, 0.5);
+    --base-white-light-grey: rgba(255, 255, 255, 0.25);
+    /* Brand colors */
+    --primary: rgb(230, 207, 0);
+    --light-primary: rgb(226, 221, 174);
+    --dim-primary: rgb(218, 196, 0);
+    --sat-primary: rgb(145, 130, 0);
+    --desat-primary: rgba(199, 179, 0, 0.5);
+    --link-primary: rgb(211, 179, 0);
+    --primary-transparent: rgba(255, 230, 0, 0.329);
+
+    /* ===== FONTS ===== */
+    --text: 'Libre Baskerville', serif;
+    --heading: 'Playfair Display', serif;
+    --code: 'Cousine', monospace;
+    --text-size: 14px;
+}
+
+/* ===== MOBILE OPTIMIZATION ===== */
+
+@media only screen and (max-width: 765px) {
+
+    body, body.darkmode {
+        --text-size: 11px;
+    }
+
+}

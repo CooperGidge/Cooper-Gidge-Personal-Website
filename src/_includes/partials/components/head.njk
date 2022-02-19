@@ -1,0 +1,56 @@
+<header class="head">
+
+    <div class="container">
+
+        <div class="navbar-wrapper">
+
+            <div class="navbar">
+
+                <span class="navbar-logo"><a href="/">Cooper Gidge</a></span>
+
+                <nav class="navbar-links pc">
+
+                    <span><a href="/" {% if homepage %}aria-current="page"{% else %}class="underline-animation"{% endif %} data-text="Home">Home</a></span>
+                    <span><a href="/posts/" {% if archivepage %}aria-current="page"{% else %}class="underline-animation"{% endif %} data-text="Archive">Archive</a></span>
+                    <span><a href="/about/" {% if aboutpage %}aria-current="page"{% else %}class="underline-animation"{% endif %} data-text="About">About</a></span>
+                    <span><a href="/contact/" {% if contactpage %}aria-current="page"{% else %}class="underline-animation"{% endif %} data-text="Contact">Contact</a></span>
+
+                </nav>
+
+                <div class="navbar-left">
+                    <span class="ri-moon-line btn-toggle dm-menu-btn" onclick="dmTest()" onKeyDown="if (event.keyCode === 13) {dmTest()}" aria-label="Theme Toggle" tabindex="0" role="button" data-tooltip="Dark Mode" data-tooltip-additional-classes="tooltip" data-tooltip-position="left"></span>
+                    <span class="ri-menu-3-line mobile-menu-btn mobile" onclick="openMobile()" onKeyDown="if (event.keyCode === 13) {openMobile()}" aria-label="Open Navigation Menu" tabindex="0" role="button" id="open" data-tooltip="Open Menu" data-tooltip-additional-classes="tooltip" data-tooltip-position="left"></span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <h1>{{ heading or title or metadata.title }}</h1>
+
+        <div class="head-bar"></div>
+
+        {% if blogpost %}
+            {% if author %}
+            {% set myAuthor = authors | getAuthor(author) %}
+            <div class="head-author">
+                <p>By <span>{{ myAuthor.name }}</span> on <span>{{ page.date | readableDate }}.</span> {% if updated %}(Updated on <span>{{ updated | readableDate }}</span>){% endif %}</p>
+            </div>
+            {% endif %}
+        {% else %}
+        <p>
+            {{ subheading or desc or metadata.desc }}
+        </p>
+        {% endif %}
+
+        {% if homepage %}
+        {% include "partials/components/socials.njk" %}
+        {% endif %}
+
+    </div>
+
+</header>

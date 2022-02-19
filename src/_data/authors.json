@@ -1,0 +1,22 @@
+[
+	{
+		"key":"coopergidge",
+		"name":"Cooper Gidge",
+		"firstname":"Cooper",
+		"lastname":"Gidge",
+		"firstinitial":"c",
+		"lastinitial":"g",
+		"bio":"I am a programmer that specializes in software development. I also do creative writing and web development as hobbies.",
+		"website":"https://www.youtube.com/c/moldymacaronix"
+	},
+	{
+		"key":"johndoe",
+		"name":"John Doe",
+		"firstname":"John",
+		"lastname":"Doe",
+		"firstinitial":"c",
+		"lastinitial":"g",
+		"bio":"John does not have a bio.",
+		"website":"https://www.youtube.com/c/MatMart/"
+	}
+]

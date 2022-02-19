@@ -1,0 +1,18 @@
+<div class="postlist">
+
+    <h2><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
+    <p class="postlist-stats">
+        {% if post.data.author %}{% set myAuthor = authors | getAuthor(post.data.author) %}<span>{{ myAuthor.name }}</span>{% endif %} on
+        {{ post.data.page.date | readableDate}}{% if post.data.updated %} (Updated on {{ post.data.updated | readableDate }}){% endif %} ⋅
+        {% for tag in post.data.tags %}
+            <span class="postlist-tag">{{ tag }}</span>
+        {% endfor %}
+    </p>
+    <div class="postlist-bar"></div>
+    <p class="postlist-desc">
+        {%- if post.data.desc -%}{{ post.data.desc }}{%- else -%}No Description Provided{%- endif -%}
+    </p>
+
+    <a href="{{ post.url | url }}" class="button small">Continue Reading</a>
+
+</div>

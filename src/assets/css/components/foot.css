@@ -1,0 +1,63 @@
+/* ===== FOOTER ===== */
+
+.foot {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(/assets/images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    color: var(--dim-white);
+    margin-top: 30px;
+}
+
+.foot .foot-content {
+    display: flex;
+    gap: 2rem;
+}
+
+.foot .foot-content .foot-content-item-1 {
+    flex: 75%;
+}
+
+.foot .foot-content .foot-content-item-2 {
+    flex: 25%;
+}
+
+.foot .foot-content h1 {
+    font-size: 2.5em;
+    margin: 0;
+    padding: 0;
+}
+
+.foot .foot-content p {
+    font-size: 1.35em;
+    color: var(--head-p);
+    padding: 10px 0;
+    margin: 0;
+    line-height: 1.75;
+}
+
+.foot p.foot-nav a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3px;
+    height: 40px;
+}
+
+.foot .foot-content a {
+    color: var(--dim-white);
+    text-decoration: underline;
+}
+
+/* ===== MOBILE OPTIMIZATION ===== */
+
+@media only screen and (max-width: 765px) {
+
+    .foot .foot-content {
+        display: block;
+    }
+    .foot .foot-content .foot-content-item-1 {
+        margin-bottom: 50px;
+    }
+
+}

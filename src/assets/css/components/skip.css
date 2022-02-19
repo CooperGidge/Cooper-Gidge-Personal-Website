@@ -1,0 +1,26 @@
+/* ===== SKIP STYLING ===== */
+
+a.skip {
+    display: inline-block;
+    position: absolute;
+    background-color: var(--notif-bg);
+    font-size: 1em;
+    line-height: 1.5;
+    color: var(--primary);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transform: translateY(-120%);
+    transition: transform 0.25s ease;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    z-index: 200;
+}
+
+a.skip:focus {
+    transform: translateY(0%);
+}

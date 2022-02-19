@@ -1,0 +1,38 @@
+<div class="contact-form" onload="randomizeContact()">
+
+    <form>
+
+        <div class="contact-form-top">
+            <div>
+                <label><b>Name</b></label>
+                <input placeholder="John Doe" type="text" required id="cname">
+                <p class="contact-form-warning">Please enter your preferred name.</p>
+            </div>
+            <div>
+                <label><b>Email</b></label>
+                <input placeholder="johndoe@example.com" type="email" required id="cemail">
+                <p class="contact-form-warning">Please enter your preferred email.</p>
+            </div>
+        </div>
+
+        <label><b>Message</b></label>
+        <textarea placeholder="Hello! Me and my team are looking (...)" type="text" required id="cmsg"></textarea>
+        <p class="contact-form-warning">Please write your message.</p>
+
+        <button class="button"><span class="ri-mail-fill"></span> Submit</button>
+
+    </form>
+
+    <!--
+        When disabling the form: ... Add "disabled" attribute to the button above and uncomment code below to show an alert.
+    -->
+
+    <!--
+    <div class="post">
+    {% alert %}
+    <p>The above contact form is temporarily disabled.</p>
+    {% endalert %}
+    </div>
+    -->
+
+</div>

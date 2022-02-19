@@ -1,0 +1,68 @@
+/* ===== MAIN LAYOUT ===== */
+
+.postlist {
+    margin-bottom: 50px; /*40px without continue reading button*/
+}
+
+.postlist h2 {
+    color: var(--heading-color);
+    font-size: 3.5em;
+    margin: 0;
+    padding: 0;
+    line-height: 1.1;
+}
+
+.postlist h2 a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.postlist h2 a:hover {
+    color: var(--base-white-grey);
+}
+
+.postlist .postlist-bar {
+    width: 150px;
+    background-color: var(--dim-primary);
+    height: 10px;
+    margin-bottom: 20px;
+}
+
+.postlist p {
+    font-size: 1.5em;
+    line-height: 1.6;
+}
+
+.postlist p.postlist-stats {
+    color: var(--base-white-grey);
+    padding: 0;
+    margin: 10px 0;
+    font-size: 1.35em;
+}
+
+.postlist .postlist-tag {
+    text-transform: capitalize;
+}
+
+.postlist .postlist-tag::after {
+    content: ',';
+}
+
+.postlist .postlist-tag:last-child:after {
+    content: '';
+}
+
+/* ===== MOBILE OPTIMIZATION ===== */
+
+@media only screen and (max-width: 765px) {
+
+    .postlist h2 {
+        font-size: 2.85em;
+    }
+
+    .postlist .postlist-bar {
+        height: 8px;
+    }
+
+}

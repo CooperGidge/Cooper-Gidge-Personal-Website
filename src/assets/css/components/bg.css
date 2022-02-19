@@ -1,0 +1,10 @@
+/* ===== BACKGROUND COMPONENT ===== */
+
+div.bg {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(/assets/images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: var(--dim-white);
+    padding: 30px 50px;
+}

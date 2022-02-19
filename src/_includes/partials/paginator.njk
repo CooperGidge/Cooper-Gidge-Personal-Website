@@ -1,0 +1,11 @@
+<div class="pagination-wrapper">
+    <div class="pagination">
+        <a href="{% if not paged.first %}{{ pagination.href.previous | url }}{% else %}{{ page.url | url }}{% endif %}" class="ri-arrow-left-s-line pagination-button {% if paged.first %}pagination-end{% endif %}" {% if paged.first %}tabindex="-1"{% else %}data-tooltip="Newer Posts" data-tooltip-additional-classes="tooltip"{% endif %} aria-label="Go Back A Page"></a>
+
+        {%- for pageEntry in pagination.pages %}
+        <a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page" data-tooltip="You Are Here" data-tooltip-additional-classes="tooltip"{% else %}data-tooltip="Page {{ loop.index }}" data-tooltip-additional-classes="tooltip"{% endif %} class="pagination-button">{{ loop.index }}</a>
+        {%- endfor %}
+
+        <a href="{% if not paged.last %}{{ pagination.href.next | url }}{% else %}{{ page.url | url }}{% endif %}" class="ri-arrow-right-s-line pagination-button {% if paged.last %}pagination-end{% endif %}" {% if paged.last %}tabindex="-1"{% else %}data-tooltip="Older Posts" data-tooltip-additional-classes="tooltip"{% endif %} aria-label="Go Forward A Page"></a>
+    </div>
+</div>

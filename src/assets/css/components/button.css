@@ -1,0 +1,51 @@
+/* ===== BUTTON ===== */
+
+button.button, a.button {
+    font-size: 2em;
+    font-family: var(--heading);
+    font-weight: bold;
+    border: 0px solid transparent;
+    box-sizing: border-box;
+    background-color: var(--dim-primary);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    line-height: 1.2;
+    color: var(--light-black);
+    text-decoration: none;
+    transition: background-color 0.25s ease;
+}
+
+button.button span, a.button span {
+    font-weight: normal;
+    transform: translateY(2px);
+    display: inline-block;
+}
+
+button.button.big, a.button.big {
+    display: block;
+    width: 100%;
+    font-size: 2.2em;
+    padding: 20px 30px;
+}
+
+button.button.small, a.button.small {
+    font-size: 1.75em;
+    padding: 8px 18px;
+    display: inline-block;
+}
+
+a.button-dim, button.button-dim, button.button:disabled {
+    opacity: var(--disabled-op);
+    cursor: default;
+}
+
+button.button:hover, a.button:hover {
+    background-color: var(--sat-primary) !important;
+}
+
+button.button.button-dim:hover, a.button.button-dim:hover, button.button:disabled:hover {
+    background-color: var(--dim-primary) !important;
+}

@@ -1,0 +1,10 @@
+---
+layout: layouts/base.njk
+heading: Cooper Gidge’s Personal Website
+subheading: I am a programmer studying computer science. I also like creative writing and world building.
+homepage: true
+---
+
+{% include "partials/postList.njk" %}
+
+<a class="button big" style="margin-top: -10px; margin-bottom: 30px;" href="/posts{% if collections.posts.length <= site.paginate %}/{% else %}/2/{% endif %}">Browse More Posts In The Archive</a>
