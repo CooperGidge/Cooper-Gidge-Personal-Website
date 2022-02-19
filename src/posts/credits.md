@@ -50,11 +50,6 @@ All icons found on this website are from [Remix Icon](https://remixicon.com/), w
 5. I use [Toastify JS](https://github.com/apvarun/toastify-js) for... *toasts.*
 6. I use [Tooltip](https://sa-si-dev.github.io/tooltip/#/) for... *tooltips.*
 
-# Social Media
-
-1. I use the [analog clock photograph by ritonn.photo](https://www.pexels.com/photo/wood-earth-forest-vintage-5740996/) as my profile photo on social medias, unless otherwise noted.
-2. I use the [dining room photograph by Sam Loyd](https://unsplash.com/photos/RLIhzcnl7IQ) as my banner on social medias, unless otherwise noted.
-
 ---
 
 # Conclusion
