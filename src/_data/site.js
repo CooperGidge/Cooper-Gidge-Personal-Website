@@ -1,6 +1,6 @@
 module.exports = {
     title: 'Vredeburg',
-    bio: 'I am a programmer studying computer science. I also like creative writing and world building.',
+    bio: 'I am a programmer studying computer science and software engineering. This is where I share my thoughts and discoveries.',
     description: 'Eleventy starter project to create a blog',
     keywords: ['eleventy', 'template', 'simple', 'clean'],
     // your site url without trailing slash

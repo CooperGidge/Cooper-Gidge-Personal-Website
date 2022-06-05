@@ -30,7 +30,7 @@
 }
 
 .postlist p {
-    font-size: 1.5em;
+    font-size: 1.35em;
     line-height: 1.6;
 }
 
@@ -41,15 +41,15 @@
     font-size: 1.35em;
 }
 
-.postlist .postlist-tag {
+.postlist-tag {
     text-transform: capitalize;
 }
 
-.postlist .postlist-tag::after {
+.postlist-tag::after {
     content: ',';
 }
 
-.postlist .postlist-tag:last-child:after {
+.postlist-tag:last-child:after {
     content: '';
 }
 

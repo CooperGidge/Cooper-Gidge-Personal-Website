@@ -6,14 +6,22 @@ layout: layouts/base.njk
 
 {{ content | safe }}
 
+{% if blogpost %}
+<p class="edit-post"><a href="/">Edit this post</a> — Posted in 
+{% for tag in tags %}
+    <span class="postlist-tag">{{ tag }}</span>
+{% endfor %}
+</p>
+{% endif %}
+
 </div>
 
 {% if blogpost %}
 
     <button class="button" style="margin-top: 10px; margin-bottom: 30px;" href="/posts/2/" onclick='textToClipboard("{{ site.url }}{{ page.url }}"); toast("Post URL copied to clipboard.");' data-tooltip="Copy URL" data-tooltip-additional-classes="tooltip"><span class="ri-share-forward-fill"></span> Share Post</button>
 
-    <!--
-    <div class="post">
+    
+    {# <div class="post">
         <hr>
     </div>
 
@@ -23,6 +31,6 @@ layout: layouts/base.njk
     <div class="switch">
         <div class="switch-previous">{% if previousPost %}<a href="{{ previousPost.url }}" class="button"><span class="ri-arrow-left-line"></span> Next Post</a>{% endif %}</div>
         <div class="switch-next">{% if nextPost %}<a href="{{ nextPost.url }}" class="button">Previous Post <span class="ri-arrow-right-line"></span></a>{% endif %}</div>
-    </div>
-    -->
+    </div> #}
+    
 {% endif %}

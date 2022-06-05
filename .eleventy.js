@@ -39,6 +39,14 @@ module.exports = (config) => {
       `;
     });
 
+    config.addPairedShortcode("highlight", function(text) {
+      return `
+<span class="highlight" data-tooltip="Share Text" data-tooltip-additional-classes="tooltip" onclick='contentToClipboard(this); toast("Text copied to clipboard.");'>
+  ${text}
+</span>
+      `;
+    });
+
     config.addPairedShortcode("bg", function(content) {
       return `
 <div class="bg">

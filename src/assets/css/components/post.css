@@ -30,7 +30,7 @@
 
 .post p, .post li, .post label {
     color: var(--base-light-black);
-    font-size: 1.5em;
+    font-size: 1.35em;
     margin: 0;
     padding: 0;
     line-height: 1.95;
@@ -43,7 +43,7 @@
 }
 
 .post pre code {
-    font-size: 1.5em;
+    font-size: 1.25em;
     font-weight: initial;
     color: unset;
 }
@@ -55,8 +55,29 @@
     border-radius: 5px;
 }
 
+.post pre code {
+    padding: 0px;
+}
+
 .post pre {
     margin: 20px 0 !important;
+}
+
+.post .highlight p {
+    display: inline;
+    background-color: rgba(137, 137, 137, 0.20);
+    padding: 2px 0px;
+    transition: 0.25s ease background-color;
+}
+
+.post .highlight:hover p {
+    background-color: rgba(137, 137, 137, 0.35);
+}
+
+.post .highlight {
+    margin-bottom: 20px;
+    display: inline-block;
+    cursor: pointer;
 }
 
 /*.post a {
@@ -107,6 +128,10 @@
     text-decoration-thickness: 1px;
 }
 
+.edit-post {
+    font-size: 1.1rem !important;
+}
+
 /* https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/ */
 
 .post blockquote {
@@ -132,7 +157,7 @@
 .post blockquote p {
     display: inline;
     font-style: italic;
-    font-size: 1.6em;
+    font-size: 1.45em;
 }
 
 .post hr {
@@ -290,4 +315,10 @@
         font-size: 1.25em;
     }
 
+}
+
+@media only screen and (max-width: 500px) {
+    .edit-post {
+        font-size: 0.9rem !important;
+    }
 }

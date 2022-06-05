@@ -46,13 +46,18 @@ function demoCopy() {
 
 
 // https://stackoverflow.com/a/48542290
-function textToClipboard (text) {
+function textToClipboard(text) {
     var dummy = document.createElement("textarea");
     document.body.appendChild(dummy);
     dummy.value = text;
     dummy.select();
     document.execCommand("copy");
     document.body.removeChild(dummy);
+}
+
+function contentToClipboard(text) {
+    var t = text.innerText || text.textContent;
+    textToClipboard(t);
 }
 
 

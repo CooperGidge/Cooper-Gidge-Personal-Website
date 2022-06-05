@@ -1,10 +1,22 @@
 ---
-title: 'Credits'
+title: Why The Web Was A Utopia, And Why It Isn’t Anymore
 desc: I’ve always had an appreciation for those who give their work to the world, for free.
 tags: 
     - general
 date: 2021-10-16
 author: coopergidge
+---
+
+[Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/utopia) defines “utopia” as the following.
+
+> a perfect society in which people work well with each other and are happy
+
+I don’t think as a human species, there will ever be a physical utopia. However, I find that the web seems to fit this definition well—or at least it used to.
+
+# Working Together
+
+The most astonishing aspect of the world wide web is the fact that it is world wide. It seems to be the first thing that
+
 ---
 
 I’ve always had an appreciation for those who give their work to the world. Whether that be through [creative commons licenses](), sharing your work on sites like [Unsplash](), or just giving your work away for free, there are many people who appreciate it. And I am one of those people.
